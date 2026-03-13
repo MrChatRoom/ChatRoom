@@ -13,7 +13,7 @@ joinBtn.onclick=()=>{
 username=nameInput.value.trim()
 if(!username)return
 
-ws=new WebSocket("ws://localhost:3000")
+ws=new WebSocket("wss://chatroom.onrender.com")
 
 ws.onmessage=e=>{
 const div=document.createElement("div")
@@ -35,4 +35,5 @@ msgInput.value=""
 
 msgInput.addEventListener("keypress",e=>{
 if(e.key==="Enter")sendBtn.click()
+
 })
